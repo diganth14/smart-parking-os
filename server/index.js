@@ -69,14 +69,14 @@ class MutexLock {
   }
 }
 
-const BIKE_SLOTS = 4;
+const BIKE_SLOTS = 8;
 const EV_SLOTS = 2;
 const CAR_SLOTS = 6;
 const TOTAL_SLOTS = BIKE_SLOTS + EV_SLOTS + CAR_SLOTS;
 
 function createSlots() {
   const list = [];
-  // Floor 1: Two-Wheeler Bike Zone (B-01 .. B-04)
+  // Floor 1: Two-Wheeler Bike Zone (B-01 .. B-08)
   for (let i = 0; i < BIKE_SLOTS; i++) {
     list.push({
       id: list.length + 1,
@@ -283,7 +283,7 @@ io.on('connection', (socket) => {
     } else {
       const fullMsg =
         type === 'BIKE'
-          ? 'Floor 1 Bike Bays Full (B-01..B-04)'
+          ? 'Floor 1 Bike Bays Full (B-01..B-08)'
           : type === 'STANDARD'
           ? 'Floor 2 Standard Car Bays Full'
           : 'Floor 2 Car/EV Bays Full';

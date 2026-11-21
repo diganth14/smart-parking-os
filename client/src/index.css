@@ -1,1 +1,69 @@
 @import "tailwindcss";
+
+@theme {
+  /* Brand */
+  --color-primary:          #1F5C4A;
+  --color-primary-hover:    #174A3B;
+  --color-occupied:         #E4EFEA;
+  --color-on-occupied:      #1F5C4A;
+  --color-ev-amber:         #B07A1F;
+  --color-error-text:       #B4443B;
+
+  /* Surfaces */
+  --color-bg:               #F5F4F0;
+  --color-surf-low:         #FFFFFF;
+  --color-surf-mid:         #EFEEE9;
+  --color-surf-high:        #E6E4DD;
+
+  /* Text */
+  --color-ink:              #1A1A17;
+  --color-ink-muted:        #6B6A64;
+  --color-ink-faint:        #9C9B94;
+
+  /* Borders */
+  --color-rule:             #D6D4CC;
+  --color-rule-light:       #EAE9E4;
+
+  /* Plate */
+  --color-plate-bg:         #1E3A8A;
+
+  /* Fonts */
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+* { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
+/* Bay tile focus visible */
+.bay-tile:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Panel shadow (subtle) */
+.panel {
+  box-shadow: 0 1px 2px rgba(20, 20, 15, 0.05);
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
+/* Bay tile focus visible */
+.bay-tile:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Panel shadow (subtle) */
+.panel {
+  box-shadow: 0 1px 2px rgba(20, 20, 15, 0.05);
+}
